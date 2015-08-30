@@ -1,5 +1,19 @@
-NMatrix rowcol extension
+NMatrix row+col extension
 ===
+
+Arbitrary row+col selection for NMatrix. Works with dense and sparse matrix types.
+
+
+Install
+---
+```
+gem build nmatrix-rowcol.gemspec
+gem install nmatrix-rowcol-0.1.0.gem
+```
+
+
+Usage
+---
 
 ```ruby
 require 'nmatrix/rowcol'

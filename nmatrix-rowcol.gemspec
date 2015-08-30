@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.date    = '2015-08-29'
   s.author  = 'Geoff Buesing'
   s.email   = 'gbuesing@gmail.com'
-  s.summary = 'Adds arbitrary row/col selection to NMatrix'
+  s.summary = 'Arbitrary row+col selection for NMatrix'
   s.license = 'MIT'
   s.homepage = 'https://github.com/gbuesing/nmatrix-rowcol'
 
