@@ -1,14 +1,13 @@
-NMatrix row+col extension
+NMatrix row/col extension
 ===
 
-Arbitrary row+col selection for NMatrix. Works with dense and sparse matrix types.
+Arbitrary row/column selection for NMatrix. Works with dense and sparse matrix types.
 
 
 Install
 ---
 ```
-gem build nmatrix-rowcol.gemspec
-gem install nmatrix-rowcol-0.1.0.gem
+gem install nmatrix-rowcol
 ```
 
 
