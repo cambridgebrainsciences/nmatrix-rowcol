@@ -9,7 +9,8 @@ class NMatrix
       out = NMatrix.new [row_numbers.length, cols], default_value, dtype: dtype, stype: stype
 
       row_numbers.each_with_index do |rownum, i|
-        out[i, 0..-1] = self[rownum, 0..-1]
+        r = get_by == :reference ? self[rownum, 0..-1] : self.slice(rownum, 0..-1)
+        out[i, 0..-1] = r
       end
 
       out
@@ -25,7 +26,8 @@ class NMatrix
       out = NMatrix.new [rows, col_numbers.length], default_value, dtype: dtype, stype: stype
 
       col_numbers.each_with_index do |colnum, i|
-        out[0..-1, i] = self[0..-1, colnum]
+        c = get_by == :reference ? self[0..-1, colnum] : self.slice(0..-1, colnum)
+        out[0..-1, i] = c
       end
 
       out
@@ -48,5 +50,5 @@ private
   def booleans_to_indexes row_numbers
     row_numbers.map.with_index {|v, i| i if v}.compact
   end
-  
+
 end

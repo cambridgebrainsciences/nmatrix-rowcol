@@ -56,9 +56,6 @@ m.col [2,0,1]
 #   [8, 6, 7] ]
 ```
 
-Note that this will always create a new matrix -- passing ```:reference``` as the optional second param to these methods will be silently ignored.
-
-
 License
 ---
 MIT
