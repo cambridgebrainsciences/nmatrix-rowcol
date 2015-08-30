@@ -1,7 +1,13 @@
 NMatrix row/col extension
 ===
 
-Arbitrary row/column selection for NMatrix. Works with dense and sparse matrix types.
+Arbitrary row/column selection for NMatrix. Allows you to do selections like:
+
+```
+x.col([0,2]).row(y =~ 'setosa')
+```
+
+Works with dense and sparse matrix types.
 
 
 Install
@@ -49,6 +55,8 @@ m.col [2,0,1]
 #   [5, 3, 4]   
 #   [8, 6, 7] ]
 ```
+
+Note that this will always create a new matrix -- passing ```:reference``` as the optional second param to these methods will be silently ignored.
 
 
 License
