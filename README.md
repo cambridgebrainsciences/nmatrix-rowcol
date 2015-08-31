@@ -46,14 +46,20 @@ m.col m.sum(0) > 12
 #   [5]   
 #   [8] ]
 
-m.row([0,2]).col([0,2]) 
+m.row([0,2]).col([0,2])
 # [ [0, 2]   
 #   [6, 8] ]
 
-m.col [2,0,1]
+m.col [2,0,1] # re-arrange columns
 # [ [2, 0, 1]   
 #   [5, 3, 4]   
 #   [8, 6, 7] ]
+
+n.row n.rows.times.to_a.sample(2) # random row samples
+# [
+#  [6, 7, 8]   
+#  [0, 1, 2] 
+# ]
 ```
 
 License
