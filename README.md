@@ -1,7 +1,7 @@
 NMatrix row/col extension
 ===
 
-Arbitrary row/column selection for NMatrix. Allows you to do selections like:
+Arbitrary row/column selection for [NMatrix](https://github.com/SciRuby/nmatrix). Allows you to do selections like:
 
 ```
 x.col([0,2]).row(y =~ 'setosa')
@@ -55,7 +55,7 @@ m.col [2,0,1] # re-arrange columns
 #   [5, 3, 4]   
 #   [8, 6, 7] ]
 
-n.row n.rows.times.to_a.sample(2) # random row samples
+m.row m.rows.times.to_a.sample(2) # random row samples
 # [
 #  [6, 7, 8]   
 #  [0, 1, 2] 
