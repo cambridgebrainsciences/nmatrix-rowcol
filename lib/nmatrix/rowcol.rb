@@ -6,10 +6,14 @@ class NMatrix
 
   def row(row_number, get_by = :copy)
     if row_numbers = get_row_or_col_index_array(row_number)
-      out = NMatrix.new [row_numbers.length, cols], default_value, dtype: dtype, stype: stype
+      out = NMatrix.new [row_numbers.length, cols].compact, default_value, dtype: dtype, stype: stype
 
       row_numbers.each_with_index do |rownum, i|
-        out[i, 0..-1] = self[rownum, 0..-1]
+        if dim > 1
+          out[i, 0..-1] = self[rownum, 0..-1]
+        else
+          out[i] = self[rownum]
+        end
       end
 
       out
@@ -21,7 +25,7 @@ class NMatrix
   alias_method :internal_column, :column
 
   def column(col_number, get_by = :copy)
-    if col_numbers = get_row_or_col_index_array(col_number)
+    if dim > 1 && col_numbers = get_row_or_col_index_array(col_number)
       out = NMatrix.new [rows, col_numbers.length], default_value, dtype: dtype, stype: stype
 
       col_numbers.each_with_index do |colnum, i|

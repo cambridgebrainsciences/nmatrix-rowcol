@@ -47,4 +47,17 @@ class TestNMatrixRowcol < MiniTest::Test
     assert_equal y.dtype, y.row([0,2]).dtype
   end
 
+  def test_1d_row
+    d = N[1,2,3,4,5]
+    assert_equal N[1,3], d.row([0,2])
+    assert_equal N[4,5], d.row(d > 3)
+  end
+
+  def test_1d_col
+    d = N[1,2,3,4,5]
+    assert_raises RangeError do
+      d.col [0,2]
+    end
+  end
+
 end
