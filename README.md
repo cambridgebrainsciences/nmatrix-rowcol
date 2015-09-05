@@ -56,10 +56,8 @@ m.col [2,0,1] # re-arrange columns
 #   [8, 6, 7] ]
 
 m.row m.rows.times.to_a.sample(2) # random row samples
-# [
-#  [6, 7, 8]   
-#  [0, 1, 2] 
-# ]
+# [ [6, 7, 8]   
+#   [0, 1, 2] ]
 ```
 
 License
